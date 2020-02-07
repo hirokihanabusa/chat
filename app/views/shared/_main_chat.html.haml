@@ -1,0 +1,49 @@
+.main-chat
+  .main-chat__group-info
+    .left-box
+      .left-box__group-name
+        techcamp
+      .left-box__members
+        Member：hirokihanabusa
+    .right-box
+      = link_to "Edit", "#", class: "right-box__edit-btn"
+  .main-chat__messages
+    .message
+      .message-upper-info
+        .message-upper-info__user-name
+          hirokihanabusa
+        .message-upper-info__datetime
+          2020/01/31(Fri) 20:26:43
+      .message__user-message
+        おはよう！
+    .message
+      .message-upper-info
+        .message-upper-info__user-name
+          hirokihanabusa
+        .message-upper-info__datetime
+          2020/01/31(Fri) 20:26:43
+      .message__user-message
+        おはよう！
+    .message
+      .message-upper-info
+        .message-upper-info__user-name
+          hirokihanabusa
+        .message-upper-info__datetime
+          2020/01/31(Fri) 20:26:43
+      .message__user-message
+        おはよう！
+    .message
+      .message-upper-info
+        .message-upper-info__user-name
+          hirokihanabusa
+        .message-upper-info__datetime
+          2020/01/31(Fri) 20:26:43
+      .message__user-message
+        おはよう！
+  .main-chat__message-form
+    .new-message
+      %input.input-box{name: "message[content]", placeholder: "type a message", type: "text"}
+      %label{class:"input-box__image"}
+        %i.far.fa-image.fa-lg.icon
+        %input{type: "file", style: "display: none"}
+      %input.submit-btn{name: "commit", type: "submit", value: "Send"}

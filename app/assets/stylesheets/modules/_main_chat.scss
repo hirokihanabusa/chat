@@ -1,0 +1,95 @@
+.main-chat {
+  width: calc(100vw - 300px);
+  &__group-info {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: $white;
+    .left-box {
+      height: 100px;
+      width: 186px;
+      &__group-name {
+        color: $group_user_gray;
+        font-size: 20px;
+        padding: 35px 0 15px 0;
+      }
+      &__members {
+        color: $member_datetime_gray;
+        font-size: 12px;
+      }
+    }
+    .right-box {
+      height: 40px;
+      width: 73px;
+      text-align: center;
+      line-height: 40px;
+      margin-left:auto;
+      border: 1px solid;
+      color: $light_blue;
+      &__edit-btn {
+        color: $light_blue;
+        text-decoration: none;
+      }
+    }
+  }
+  &__messages {
+    height: calc(100vh - 100px - 90px);
+    padding: 46px 40px;
+    background-color: $main_chat_gray;
+    .message {
+      height: 65px;
+      width: 484px;
+      padding-bottom: 105px;
+      .message-upper-info {
+        display: flex;
+        margin-bottom: 10px;
+        &__user-name {
+          color: $group_user_gray;
+          font-weight: bold;
+        }
+        &__datetime {
+          color: $member_datetime_gray;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      .message__user-message {
+        color: $message_gray;
+        font-size: 14px;
+      }
+    }
+  }
+  &__message-form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: $message_form_gray;
+    .new-message {
+      display: flex;
+      position: relative;
+      height: 50px;
+      width: 1059px;
+      .input-box {
+        width: 945px;
+        border: none;
+        padding: 0 10px;
+        &__image {
+          position: absolute;
+          top: 15px;
+          left: 914px;
+        }
+      }
+      .icon {
+        cursor: pointer;
+      }
+      .submit-btn {
+        height: 50px;
+        width: 100px;
+        color: $white;
+        background-color: $light_blue;
+        margin-left: 15px;
+      }
+    }
+  }
+}
