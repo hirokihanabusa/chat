@@ -2,13 +2,13 @@
   .header
     .user-name
       .user-name__box
-        hirokihanabusa
+        = current_user.name
       %ul.user-name__icon
         %li.icon__new-group
           = link_to "#" do
             %i.fas.fa-edit.icon.fa-fw
         %li.icon__edit-user
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             %i.fas.fa-cog.icon.fa-fw
   .groups
     .group
