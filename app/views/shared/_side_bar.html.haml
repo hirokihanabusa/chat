@@ -5,39 +5,16 @@
         = current_user.name
       %ul.user-name__icon
         %li.icon__new-group
-          = link_to "#" do
+          = link_to new_group_path do
             %i.fas.fa-edit.icon.fa-fw
         %li.icon__edit-user
           = link_to edit_user_path(current_user) do
             %i.fas.fa-cog.icon.fa-fw
   .groups
     .group
-      .group__group-name
-        techcamp
-      .group__latest-message
-        まだメッセージがありません
-    .group 
-      .group__group-name
-        techcamp
-      .group__latest-message
-        まだメッセージがありません
-    .group
-      .group__group-name
-        techcamp
-      .group__latest-message
-        まだメッセージがありません
-    .group
-      .group__group-name
-        techcamp
-      .group__latest-message
-        まだメッセージがありません
-    .group
-      .group__group-name
-        techcamp
-      .group__latest-message
-        まだメッセージがありません
-    .group
-      .group__group-name
-        techcamp
-      .group__latest-message
-        まだメッセージがありません
+      - current_user.groups.each do |group|
+        .group__group-name
+          = link_to "#", class: "group-message" do
+            = group.name
+        .group__latest-message
+          まだメッセージがありません

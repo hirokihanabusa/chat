@@ -43,9 +43,13 @@
         padding-top: 20px;
         margin-bottom: 5px;
       }
+      .group-message {
+        color: #ffffff;
+        text-decoration: none;
+      }
       &__latest-message {
         font-size: $side_bar_message;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
       }
     }
   }
